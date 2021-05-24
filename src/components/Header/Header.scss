@@ -6,14 +6,25 @@
   @include flex-center;
 
   & .header {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     justify-content: space-between;
     padding-top: 30px;
     height: 80px;
     border-bottom: 1px solid rgba($color-white, 0.5);
     width: clamp(1300px, 100%, 1300px);
 
+    & .header__left,
+    & .header__right {
+      @include flex-center;
+      justify-content: space-between;
+      flex: 0.35;
+      width: 100%;
+    }
+
+    & .header__logo {
+      flex: 0.3;
+      @include flex-center;
+    }
     & .header__social {
       width: 65px;
       @include flex-space-between;
