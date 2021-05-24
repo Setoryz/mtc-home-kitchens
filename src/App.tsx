@@ -1,4 +1,5 @@
 import "./App.scss";
+import Discover from "./components/Discover";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 
@@ -9,7 +10,9 @@ function App() {
       <Header />
       {/* HeroSection */}
       <Hero />
-      <h1>Text scroll</h1>
+      {/* Discover Section */}
+      <Discover />
+      <h1>Test scroll</h1>
     </div>
   );
 }

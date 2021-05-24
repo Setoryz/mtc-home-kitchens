@@ -1,0 +1,61 @@
+@import "../../variables";
+
+.discover__container {
+  // @include flex-center;
+}
+
+.discover {
+  // max-width: 1300px;
+  display: flex;
+  align-items: center;
+
+  & .discover__image {
+    flex: 0.5;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  & .discover__details {
+    flex: 0.5;
+    left: 50%;
+    max-width: 650px;
+
+    & > div {
+      padding-left: 70px;
+    }
+    // padding-right: auto;
+    & .discover__subtitle {
+      & p {
+        @include text-small-caps;
+        text-align: left;
+        color: $color-accent;
+      }
+    }
+
+    & .discover__title {
+      & h2 {
+        color: $color-dark;
+        font-family: "Helvetica-Bold";
+        font-size: 42px;
+        line-height: 52px;
+        margin: 0;
+      }
+    }
+
+    & .discover__text {
+      & p {
+        font-family: Roboto;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: normal;
+        color: $color-gray;
+      }
+    }
+
+    & .discover__cta button {
+      box-shadow: none;
+    }
+  }
+}
