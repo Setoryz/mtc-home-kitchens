@@ -1,5 +1,6 @@
 $color-white: #fff;
 $color-gray: #777777;
+$color-gray-light: #eeeeee;
 $color-dark: #222222;
 $color-accent: #d4b254;
 $color-accent-dark: #c8a74b;
@@ -10,10 +11,8 @@ $color-accent-dark: #c8a74b;
   align-items: center;
 }
 @mixin flex-column-center {
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 @mixin flex-space-between {
   display: flex;

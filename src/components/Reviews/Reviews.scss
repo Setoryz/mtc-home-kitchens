@@ -1,0 +1,79 @@
+@import "../../variables";
+
+.reviews {
+  background-color: $color-gray-light;
+  height: 600px;
+  @include flex-center;
+  width: clap(400px, 80%, 1300px);
+
+  & .reviews__btnPrev,
+  & .reviews__btnNext {
+    cursor: pointer;
+    &:hover {
+      & svg {
+        fill: $color-accent-dark;
+      }
+    }
+    & svg {
+      fill: $color-accent;
+    }
+  }
+  & .reviews__btnPrev {
+    margin-right: 10%;
+  }
+  & .reviews__btnNext {
+    margin-left: 10%;
+    transform: rotate(180deg);
+  }
+
+  & .review__details {
+    @include flex-column-center;
+    justify-content: space-between;
+    width: 600px;
+
+    & .review__subtitle {
+      @include text-small-caps;
+      color: $color-accent;
+      & p {
+        margin-top: 0;
+      }
+    }
+
+    & .review__title {
+      & h3 {
+        color: $color-dark;
+        font-family: "Helvetica-Bold";
+        font-size: 32px;
+        text-align: center;
+        line-height: 42px;
+        margin: 0;
+      }
+    }
+
+    & .review__text {
+      color: $color-gray;
+      font-family: Helvetica;
+      font-size: 18px;
+      text-align: center;
+      line-height: 32px;
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    & .review__author {
+      font-family: "Roboto";
+      font-size: 13px;
+      color: $color-gray;
+      text-align: center;
+    }
+
+    & button {
+      margin-top: 10px;
+      box-shadow: none;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}

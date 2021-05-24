@@ -2,6 +2,7 @@ import "./App.scss";
 import Discover from "./components/Discover";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Reviews from "./components/Reviews";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Hero />
       {/* Discover Section */}
       <Discover />
+      {/* Reviews Section */}
+      <Reviews />
       <h1>Test scroll</h1>
     </div>
   );
