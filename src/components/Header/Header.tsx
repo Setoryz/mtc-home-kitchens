@@ -1,6 +1,8 @@
+import Button from "../shared/Button";
 import "./Header.scss";
 
 const Header = () => {
+  // TODO: Add Responsive Nav
   return (
     <div className="header__container">
       <div className="header">
@@ -16,25 +18,25 @@ const Header = () => {
             <i className="fab fa-instagram"></i>
           </a>
         </div>
+
         {/* left nav */}
         <div className="header__navLinks">
           <a href="/">Shop</a>
           <a href="/">Plan My Kitchen</a>
         </div>
+
         {/* logo */}
         <div className="header__logo">
           <img src="/assets/logo.svg" alt="MTK Logo" />
         </div>
+
         {/* right nav */}
         <div className="header__navLinks">
           <a href="/">About</a>
           <a href="/">Gallery</a>
         </div>
-        {/* order button */}
-        <button className="header__btn">
-          My Order
-          <i className="fal fa-shopping-cart"></i>
-        </button>
+
+        <Button type="outline" label="My Order" icon="fal fa-shopping-cart" />
       </div>
     </div>
   );

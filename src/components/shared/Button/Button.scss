@@ -1,0 +1,32 @@
+@import "../../../variables";
+
+.btn {
+  background-color: transparent;
+  @include text-small-caps;
+  @include transition-all;
+  cursor: pointer;
+
+  height: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 1px solid $color-white;
+  border-radius: 25px;
+
+  &.accent-fill {
+    background-color: $color-accent;
+    border-color: $color-accent;
+    &:hover {
+      background-color: $color-white;
+      border-color: $color-white;
+    }
+  }
+
+  &:hover {
+    color: $color-accent;
+    border-color: $color-accent;
+  }
+
+  & i {
+    padding-left: 5px;
+  }
+}
