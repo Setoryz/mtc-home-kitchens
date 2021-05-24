@@ -1,0 +1,25 @@
+$color-white: #fff;
+$color-accent: #d4b254;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin text-small-caps {
+  color: $color-white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+@mixin transition-all {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}

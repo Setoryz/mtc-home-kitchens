@@ -1,0 +1,70 @@
+@import "../../variables";
+
+.header__container {
+  width: 100%;
+  position: absolute;
+  @include flex-center;
+
+  & .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    height: 80px;
+    border-bottom: 1px solid rgba($color-white, 0.5);
+    width: clamp(1300px, 100%, 1300px);
+
+    & .header__social {
+      width: 65px;
+      @include flex-space-between;
+      & i {
+        font-size: 16px;
+        color: $color-white;
+      }
+    }
+
+    & a {
+      font-weight: 100;
+      @include text-small-caps;
+      @include transition-all;
+      & i {
+        @include transition-all;
+      }
+      &:hover,
+      &:hover i {
+        color: $color-accent;
+      }
+    }
+    & .header__navLinks {
+      @include flex-space-between;
+      & a {
+        padding-right: 35px;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+
+    & .header__btn {
+      background-color: transparent;
+      @include text-small-caps;
+      @include transition-all;
+      cursor: pointer;
+
+      height: 50px;
+      padding-left: 25px;
+      padding-right: 25px;
+      border: 1px solid $color-white;
+      border-radius: 25px;
+
+      &:hover {
+        color: $color-accent;
+        border-color: $color-accent;
+      }
+
+      & i {
+        padding-left: 5px;
+      }
+    }
+  }
+}
