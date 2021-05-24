@@ -1,32 +1,35 @@
 @import "../../../variables";
 
 .btn {
-  background-color: transparent;
   @include text-small-caps;
   @include transition-all;
+  @include flex-center;
+  background: transparent 0% 0% no-repeat padding-box;
+  box-sizing: border-box;
   cursor: pointer;
 
   height: 50px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
   border: 1px solid $color-white;
   border-radius: 25px;
 
-  &.accent-fill {
-    background-color: $color-accent;
-    border-color: $color-accent;
-    &:hover {
-      background-color: $color-white;
-      border-color: $color-white;
-    }
-  }
-
   &:hover {
-    color: $color-accent;
-    border-color: $color-accent;
+    background-color: $color-accent-dark;
+    border: 1px solid $color-accent-dark;
   }
 
   & i {
     padding-left: 5px;
+  }
+  &.accent-fill {
+    background-color: $color-accent;
+    border: none;
+    box-shadow: 0px 2px 10px #00000033;
+    &:hover {
+      border: none;
+      background-color: $color-accent-dark;
+      box-shadow: 0px 2px 5px #00000040;
+    }
   }
 }
