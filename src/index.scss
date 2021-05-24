@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Helvetica);
 @import url(https://pro.fontawesome.com/releases/v5.0.10/css/all.css);
+@import "./variables";
 
 body {
   margin: 0;
@@ -9,6 +10,12 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  & *::selection {
+    background: $color-accent;
+    color: $color-white;
+    text-shadow: none;
+  }
 }
 
 code {
