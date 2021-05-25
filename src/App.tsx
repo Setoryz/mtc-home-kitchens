@@ -1,5 +1,6 @@
 import "./App.scss";
 import Discover from "./components/Discover";
+import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -18,7 +19,8 @@ function App() {
       <Reviews />
       {/* Gallery Section */}
       <Gallery />
-      <h1>Test scroll</h1>
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }

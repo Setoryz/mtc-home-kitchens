@@ -1,0 +1,106 @@
+@import "../../variables";
+
+.footer {
+  max-width: 100vw;
+  height: 496px;
+  left: 0px;
+  right: 0px;
+
+  box-sizing: border-box;
+
+  & .footer__bg {
+    position: absolute;
+    max-height: 100%;
+    z-index: -1;
+    margin-bottom: 0;
+    background-color: rgba($color-dark, 1);
+
+    img {
+      background-color: rgba($color-dark, 0.8);
+      z-index: 0;
+      overflow: hidden;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: difference;
+    }
+  }
+
+  & .footer__details {
+    @include flex-column-center;
+    z-index: 10;
+    height: 100%;
+
+    & .footer__logo {
+      @include flex-center;
+      //   display: flex;
+      justify-content: space-between;
+      width: clamp(600px, 100%, 1300px);
+
+      & img {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      & hr {
+        width: 100%;
+      }
+    }
+
+    & .footer__nav {
+      width: clamp(600px, 80%, 1000px);
+      display: flex;
+      justify-content: space-between;
+
+      & .nav__column {
+        & .footer__title {
+          & h4 {
+            color: $color-white;
+            font-family: "Helvetica-Bold";
+            font-size: 24px;
+          }
+        }
+        & .footer__links {
+          & a {
+            @include text-small-caps;
+            @include transition-all;
+            color: rgba($color-white, 0.6);
+
+            &:hover {
+              color: $color-accent;
+            }
+          }
+        }
+
+        & .footer__social {
+          & svg {
+            fill: $color-white;
+            padding-right: 10px;
+            cursor: pointer;
+            @include transition-all;
+            &:hover {
+              fill: $color-accent;
+            }
+            &:last-child {
+              padding: none;
+            }
+          }
+        }
+      }
+    }
+    & .footer__copyright {
+      margin-top: 48px;
+      & p {
+        margin-top: 0;
+        text-align: center;
+        font-size: 13px;
+        font-family: "Roboto";
+        color: rgba($color-white, 0.5);
+      }
+    }
+
+    & hr {
+      width: clamp(500px, 90%, 1300px);
+      border: 1px solid rgba($color-white, 0.15);
+    }
+  }
+}
