@@ -19,10 +19,10 @@
     }
   }
   & .reviews__btnPrev {
-    margin-right: 10%;
+    margin-right: 5%;
   }
   & .reviews__btnNext {
-    margin-left: 10%;
+    margin-left: 5%;
     transform: rotate(180deg);
   }
 
@@ -41,11 +41,7 @@
 
     & .review__title {
       & h3 {
-        color: $color-dark;
-        font-family: "Helvetica-Bold";
-        font-size: 32px;
-        text-align: center;
-        line-height: 42px;
+        @include text-h3;
         margin: 0;
       }
     }

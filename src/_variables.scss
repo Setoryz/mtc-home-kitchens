@@ -28,6 +28,13 @@ $color-accent-dark: #c8a74b;
   letter-spacing: 3px;
   font-size: 13px;
 }
+@mixin text-h3 {
+  color: $color-dark;
+  font-family: "Helvetica-Bold";
+  font-size: 32px;
+  text-align: center;
+  line-height: 42px;
+}
 
 @mixin transition-all {
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
