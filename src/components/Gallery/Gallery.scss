@@ -1,0 +1,33 @@
+@import "../../variables";
+
+.gallery {
+  @include flex-column-center;
+
+  & .gallery__title {
+    margin-top: 50px;
+    & h3 {
+      @include text-h3;
+    }
+  }
+  & .gallery__images {
+    @include flex-center;
+
+    & img {
+      width: 310px;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: none;
+      }
+    }
+  }
+
+  & .gallery__cta button {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
