@@ -14,22 +14,24 @@ const Discover = () => {
       </div>
       {/* discover details */}
       <div className="discover__details">
-        <div className="discover__subtitle">
-          <p>Quality Craftmanship from build to delivery</p>
-        </div>
-        <div className="discover__title">
-          <h2>Discover the beauty of a handmade kitchen</h2>
-        </div>
-        <div className="discover__text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget
-            est sit amet sapien venenatis maximus vel in urna. Nam mauris arcu,
-            feugiat in finibus vitae, sollicitudin id purus. Ut imperdiet, magna
-            eu pharetra tincidunt, mauris purus ultrices.
-          </p>
-        </div>
-        <div className="discover__cta">
-          <Button type="accent-fill" label="About Us" />
+        <div className="details__block">
+          <div className="discover__subtitle">
+            <p>Quality Craftmanship from build to delivery</p>
+          </div>
+          <div className="discover__title">
+            <h2>Discover the beauty of a handmade kitchen</h2>
+          </div>
+          <div className="discover__text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              eget est sit amet sapien venenatis maximus vel in urna. Nam mauris
+              arcu, feugiat in finibus vitae, sollicitudin id purus. Ut
+              imperdiet, magna eu pharetra tincidunt, mauris purus ultrices.
+            </p>
+          </div>
+          <div className="discover__cta">
+            <Button type="accent-fill" label="About Us" />
+          </div>
         </div>
       </div>
     </div>

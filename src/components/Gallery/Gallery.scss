@@ -2,19 +2,21 @@
 
 .gallery {
   @include flex-column-center;
-
+  width: 100%;
   & .gallery__title {
     margin-top: 50px;
     & h3 {
       @include text-h3;
     }
   }
+  overflow: hidden;
   & .gallery__images {
     @include flex-center;
-
+    flex-wrap: wrap;
+    // width: clamp(300px)
     & img {
       width: 310px;
-      margin-right: 20px;
+      margin: 10px;
 
       &:last-child {
         margin-right: none;
@@ -28,6 +30,20 @@
     box-shadow: none;
     &:hover {
       box-shadow: none;
+    }
+  }
+
+  @media (max-width: 450px) {
+    & .gallery__images {
+      flex-direction: column;
+      width: clamp(200px, 80vw, 310px);
+
+      & img {
+        width: clamp(200px, 80vw, 310px);
+        margin-left: 0;
+        margin-right: 0;
+        object-fit: contain;
+      }
     }
   }
 }

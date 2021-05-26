@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import Button from "../shared/Button";
+import { heroDetailsVariants } from "../utils/motionVariants";
 import "./Hero.scss";
 
 const Hero = () => {
@@ -14,15 +16,20 @@ const Hero = () => {
       />
 
       {/* Details */}
-      <div className="hero__details">
+      <motion.div
+        variants={heroDetailsVariants}
+        initial="initial"
+        animate="animate"
+        className="hero__details"
+      >
         <div className="details__small">
           Design and order your new kitchen online today
         </div>
-        <div className="details__large">
+        <h1 className="details__large">
           Bespoke &amp; made to measure handmade kitchen design
-        </div>
+        </h1>
         <Button type="accent-fill" label="Order Now" />
-      </div>
+      </motion.div>
 
       {/* Background Slider Buttons */}
       <div className="hero__sliderBtn">

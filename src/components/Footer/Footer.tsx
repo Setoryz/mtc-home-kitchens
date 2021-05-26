@@ -24,13 +24,13 @@ const Footer = () => {
 
         <div className="footer__nav">
           {footerLinks.map(({ title, links }) => (
-            <div className="nav__column">
+            <div key={title} className="nav__column">
               <div className="footer__title">
                 <h4>{title}</h4>
               </div>
               <div className="footer__links">
                 {links.map((link) => (
-                  <div>
+                  <div key={link}>
                     <a href="/">{link}</a>
                   </div>
                 ))}
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__copyright">
-          <p>Copyright Online MTC Home Kitchens 2018 - All rights reserved.</p>
+          <p>Copyright Online MTC Home Kitchens 2021 - All rights reserved.</p>
           <p>Responsive website design, Development & Hosting by mtc.</p>
         </div>
 

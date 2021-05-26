@@ -39,3 +39,26 @@ $color-accent-dark: #c8a74b;
 @mixin transition-all {
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    display: flex;
+    opacity: 1;
+  }
+  99% {
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    display: none;
+  }
+}

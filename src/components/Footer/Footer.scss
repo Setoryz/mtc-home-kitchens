@@ -11,6 +11,7 @@
   & .footer__bg {
     position: absolute;
     max-height: 100%;
+    width: 100%;
     z-index: -1;
     margin-bottom: 0;
     background-color: rgba($color-dark, 1);
@@ -35,19 +36,19 @@
       @include flex-center;
       //   display: flex;
       justify-content: space-between;
-      width: clamp(600px, 100%, 1300px);
+      width: clamp(300px, 90%, 1300px);
 
       & img {
         padding-left: 20px;
         padding-right: 20px;
       }
       & hr {
-        width: 100%;
+        width: clamp(100px, 40%, 1300px);
       }
     }
 
     & .footer__nav {
-      width: clamp(600px, 80%, 1000px);
+      width: clamp(300px, 80%, 1000px);
       display: flex;
       justify-content: space-between;
 
@@ -64,6 +65,8 @@
             @include text-small-caps;
             @include transition-all;
             color: rgba($color-white, 0.6);
+            letter-spacing: 3px;
+            line-height: 30px;
 
             &:hover {
               color: $color-accent;
@@ -99,8 +102,65 @@
     }
 
     & hr {
-      width: clamp(500px, 90%, 1300px);
+      width: clamp(100px, 90%, 1300px);
       border: 1px solid rgba($color-white, 0.15);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    box-sizing: border-box;
+    height: 600px;
+    & .footer__details {
+      // padding-top: 50px;
+      // padding-bottom: 20px;
+      & .footer__nav {
+        flex-wrap: wrap;
+      }
+      & .footer__logo {
+        & hr {
+          width: 30%;
+        }
+      }
+      & .footer__copyright {
+        margin-top: 20px;
+      }
+    }
+
+    & .nav__column {
+      margin-right: 30px;
+    }
+    & .footer__bg {
+      height: 600px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 650px;
+    & .footer__bg {
+      height: 650px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    height: 700px;
+    bottom: 0;
+    background-color: darken($color-dark, 10);
+    & .footer__bg {
+      height: 700px;
+    }
+    align-items: center;
+    & .footer__details {
+      margin-top: 40px;
+      @include flex-center;
+
+      & .footer__copyright {
+        margin-top: 20px;
+        max-width: 80%;
+      }
+    }
+
+    & .nav__column {
+      margin-right: 15px;
     }
   }
 }

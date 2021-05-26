@@ -8,21 +8,31 @@
   & .header {
     @include flex-center;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 20px;
     height: 80px;
     border-bottom: 1px solid rgba($color-white, 0.5);
-    width: clamp(1300px, 100%, 1300px);
+    width: clamp(300px, 100%, 1300px);
+    // margin-right: 30px;
 
+    @include transition-all;
+    @media (max-width: 1330px) {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
     & .header__left,
     & .header__right {
       @include flex-center;
       justify-content: space-between;
       flex: 0.35;
       width: 100%;
+      @include transition-all;
+      @media (max-width: 1330px) {
+        flex: 0.4;
+      }
     }
 
     & .header__logo {
-      flex: 0.3;
+      flex: 0.1;
       @include flex-center;
     }
     & .header__social {
@@ -52,6 +62,142 @@
         padding-right: 35px;
         &:last-child {
           padding-right: 0;
+        }
+      }
+    }
+
+    & button {
+      margin-left: 20px;
+    }
+  }
+
+  & .header__small {
+    @include flex-center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 80px;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-bottom: 1px solid rgba($color-white, 0.5);
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+    & .header__menuIcon {
+      z-index: 10;
+      cursor: pointer;
+      float: right;
+      padding: 1.5rem 1.25rem;
+      position: relative;
+      user-select: none;
+
+      & .menu__icon {
+        background-color: $color-white;
+        display: block;
+        height: 2px;
+        position: relative;
+        @include transition-all;
+        width: 30px;
+
+        &:before,
+        &:after {
+          background-color: $color-white;
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all 0.4s ease-in-out;
+          width: 100%;
+        }
+
+        &:before {
+          top: 10px;
+        }
+        &:after {
+          top: -10px;
+        }
+      }
+    }
+  }
+
+  & .header__menuBtn {
+    display: none;
+    &:checked {
+      & ~ .header {
+        animation: fadeIn 0.5s;
+        display: flex;
+      }
+
+      & ~ .header__small .header__menuIcon {
+        & .menu__icon {
+          background: transparent;
+
+          &:before {
+            transform: rotate(-45deg);
+          }
+          &:after {
+            transform: rotate(45deg);
+          }
+        }
+        &:not(.steps) .menu__icon {
+          &:before,
+          &:after {
+            top: 0;
+          }
+        }
+      }
+    }
+    @media (max-width: 1024px) {
+      &:not(:checked) {
+        & ~ .header {
+          display: flex;
+          animation: fadeOut 0.5s forwards;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    & .header {
+      display: none;
+      transition: all 0.5s linear;
+
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      top: 0;
+      height: calc(100vh - 20px);
+      background-color: rgba($color-accent-dark, 0.9);
+
+      & .header__logo {
+        order: -1;
+        flex: none;
+      }
+
+      & .header__left,
+      & .header__right {
+        flex: none;
+        flex-direction: column;
+        align-items: center;
+        &.header__left {
+          margin-top: 30px;
+          & .header__navLinks a:first-child {
+            margin-top: 30px;
+          }
+        }
+        &.header__right button {
+          margin: 0;
+        }
+        & .header__navLinks {
+          flex-direction: column;
+          align-items: center;
+          & a {
+            margin-bottom: 30px;
+            padding-right: 0px;
+          }
         }
       }
     }
