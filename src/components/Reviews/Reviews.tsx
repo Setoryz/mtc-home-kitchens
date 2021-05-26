@@ -15,7 +15,6 @@ const Reviews = () => {
     window.addEventListener("resize", handleResize);
     return () => {};
   }, []);
-  console.log(isSmallWidth);
   return (
     <div className="reviews__container">
       <div ref={reviewsRef} className="reviews">

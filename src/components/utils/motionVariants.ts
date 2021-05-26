@@ -9,8 +9,6 @@ export const headerVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      //   when: "afterChildren",
-      //   delay: 0.5,
       duration: 1.0,
       ease: [0.87, 0, 0.13, 1],
     },

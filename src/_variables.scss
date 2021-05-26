@@ -42,6 +42,7 @@ $color-accent-dark: #c8a74b;
 
 @keyframes fadeIn {
   0% {
+    height: 0;
     opacity: 0;
   }
   100% {
